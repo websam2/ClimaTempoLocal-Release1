@@ -35,7 +35,6 @@ function App() {
           tempMin: res.data.main.temp_min,
           tempMax: res.data.main.temp_max,
           humidity: res.data.main.humidity,
-          rainH: res.data.rain ? res.data.rain["3h"] : null,
         });
       } catch (err) {
         console.error(err);
@@ -86,12 +85,6 @@ function App() {
             <div>Umidade:</div>
             <div>
               <h2>{data.humidity}%</h2>
-            </div>
-          </div>
-          <div>
-            <div>Chuva:</div>
-            <div>
-              <h2>{data.rainH}%</h2>
             </div>
           </div>
         </div>
